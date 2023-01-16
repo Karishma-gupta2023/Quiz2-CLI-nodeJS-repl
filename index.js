@@ -68,14 +68,15 @@ function game(){
 
 function highScores() {
 
+
+  console.log(chalk.green("Yay, you have scored " + score + " send me a screenshot if you have created a high score to update"));
+
   console.log("Top 2 high Scores are :");
   console.log("--------------------------------------------------");
-  for (var k = 0; k < highScore.length; k++) {
-    var currentScore1 = highScore[k];
-    console.log(currentScore1.name, currentScore1.scored);
 
-    console.log("--------------------------------------------------");
-  }
+  highScore.map(function displayHighScore(a) {
+    console.log("name: ", chalk.blue(a.name) + " score: ", a.scored);
+  })
 
 
 }
